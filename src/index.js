@@ -1,4 +1,7 @@
-class Execue{
+class lottery{
+    execute(){
+        this.output(this.select())
+    }
 
     select(){
         const name = document.getElementById('name')
@@ -15,8 +18,7 @@ class Execue{
 }
 
 addEventListener('click',()=>{
-    const name = new Execue().select()
-    console.log(name)
+    const lottery = new lottery()
 
-    new Execue().output(name)
-})
+    lottery.execute()
+}) 
