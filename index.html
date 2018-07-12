@@ -6,13 +6,33 @@
   </head>
 <body>
   <h1>抽選</h1>
-  <div>
-    名前を入力してください。
-    <input type="text" id='name' />
-    <button id='submitBtn'>結果を表示する</button>
+
+  <ul class = 'stateTop'>
+    <li><a href="#">設定</a></li>
+    <li><a href="#">結果</a></li>    
+  </ul>
+
+  <div id='winner'>
+    <p>当選者数を入力してください</p>
+    <input type="number" id='numOfWinners'>
   </div>
-  <p>当選者</p>
+
+  <div id='applicant'>
+    <p>応募者名を入力してください</p>
+    <button id ='addApplicant'>+</button>
+    <button id ='deleteApplicant'>-</button>    
+    <div id='addWinnerList'><input type="text" id='NameId0' class="box" ></div>
+  </div>
+
+  <div id='result'>
+    <button id='onClick'>結果を表示する</button>
+    <p class='resultMessage'>おめでとうメッセージ</p>
+  </div>
+
   <div id='winnerList'></div>
+
+  <input type="reset" id='reset' value="もう一度">
+
   <script src="./dist/app.js"></script>
 </body>
 </html>
