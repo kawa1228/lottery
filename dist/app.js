@@ -73,8 +73,13 @@ class Lottery{
     }
  
     select(){
-        const name = document.getElementById('NameId0')
-        return name.value
+        const nameBox = document.querySelectorAll('.nameBox')
+        console.log(nameBox[1].value)
+
+        const random = Math.floor(Math.random()*nameBox.length)
+        console.log(nameBox[random].value)
+
+        return nameBox[random].value
     }
     
     output(name){
@@ -111,10 +116,8 @@ function addForm(){
 
         for(let j=1; j<textArray.length; j++) {
             /*id属性値を変更*/
-            newNode.id = 'NameId' + j;
+            newNode.id = 'NameId0' + j;
             /*コンテンツを挿入*/
-            console.log(document.createTextNode(newNode.id))
-            //※上にvalueが入ってしまう！！NameId1~..
             newNode.appendChild(document.createTextNode(newNode.id));
             /*新ノードを追加*/
             addWinnerList.appendChild(newNode);
@@ -129,9 +132,8 @@ deleteApplicant.addEventListener('click',()=>{
 
 const deleteForms = ()=>{
     const addWinnerList = document.getElementById('addWinnerList')
-//childNodes[0]だと#id0からdeleteされてしまう 
     if(addWinnerList.hasChildNodes()){
-        addWinnerList.removeChild(addWinnerList.childNodes[0])
+        addWinnerList.removeChild(addWinnerList.lastChild)
     }
 }
 
