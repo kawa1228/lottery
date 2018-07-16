@@ -14,14 +14,18 @@
 
   <div id='winner'>
     <p>当選者数を入力してください</p>
-    <input type="number" id='numOfWinners'>
+    <input type=text id='numOfWinners' value=1>
+    <button id ='formPlus'>+</button>
+    <button id ='formMinus'>-</button> 
   </div>
 
   <div id='applicant'>
     <p>応募者名を入力してください</p>
+    <div id='addWinnerList'>
+    <p><input type="text" id='NameId0' class="nameBox" >
     <button id ='addApplicant'>+</button>
-    <button id ='deleteApplicant'>-</button>    
-    <div id='addWinnerList'><input type="text" id='NameId0' class="nameBox" ></div>
+    <button id ='deleteApplicant'>-</button></p>
+    </div>
   </div>
 
   <div id='result'>

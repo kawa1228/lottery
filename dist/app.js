@@ -67,6 +67,15 @@
 /* 0 */
 /***/ (function(module, exports) {
 
+document.querySelector('#formPlus').addEventListener('click',()=>{
+    document.querySelector('#numOfWinners').value++;
+})
+document.querySelector('#formMinus').addEventListener('click',()=>{
+    if(document.querySelector('#numOfWinners').value > 0){
+        document.querySelector('#numOfWinners').value--;
+    }
+})
+
 class Lottery{
     execute(){
         this.output(this.select())
@@ -114,7 +123,7 @@ onClick.addEventListener('click',()=>{
 
     lottery.execute()
 })
-
+// add form
 addForm()
 function addForm(){
     const addWinnerList = document.getElementById('addWinnerList');
