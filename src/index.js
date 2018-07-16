@@ -27,10 +27,15 @@ class Lottery{
     
     output(name){
         const elem = document.getElementById('winnerList')
-        //elem.innerText = ''
-        const div = document.createElement('div')
-        div.innerText = name
-        elem.appendChild(div)
+        elem.innerText = ''
+        const ul = document.createElement('ul')
+        for (let i = 0; i < name.length; i++) {
+            let li = document.createElement('li');
+            li.className = 'winnersList';
+            li.innerText = name[i]+' さん';
+            ul.appendChild(li);
+          }
+        elem.appendChild(ul)
     }
 }
 
