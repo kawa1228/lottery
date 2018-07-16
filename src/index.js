@@ -5,12 +5,24 @@ class Lottery{
  
     select(){
         const nameBox = document.querySelectorAll('.nameBox')
-        console.log(nameBox[1].value)
+        const winnerCount = document.querySelector('#numOfWinners').value
 
-        const random = Math.floor(Math.random()*nameBox.length)
-        console.log(nameBox[random].value)
-
-        return nameBox[random].value
+        const selectList =[]
+        //応募者一覧
+        for(let i=0;i<nameBox.length;i++){
+            selectList.push(nameBox[i].value)
+        }
+        //応募者一覧をシャッフル
+        for (let i = selectList.length - 1; i >= 0; i--){
+            var rand = Math.floor( Math.random() * ( i + 1 ) );
+            [selectList[i], selectList[rand]] = [selectList[rand], selectList[i]]
+        }
+        //当選者数分セレクト
+        const selector =[]
+        for(let i=0;i<winnerCount ;i++){
+            selector.push(selectList[i])
+        }
+        return selector
     }
     
     output(name){
