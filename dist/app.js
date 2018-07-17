@@ -78,7 +78,12 @@ document.querySelector('#formMinus').addEventListener('click',()=>{
 
 class Lottery{
     execute(){
-        this.output(this.select())
+        if(this.validation()){
+            this.output(this.select())
+            this.winnerMessage()
+        } else {
+            alert('当選者数が多すぎます')
+        }
     }
  
     select(){
@@ -115,13 +120,20 @@ class Lottery{
           }
         elem.appendChild(ul)
     }
-}
-
-const winnerMessage = ()=>{
-    const resultMessage = document.querySelector('#resultMessage')
-    const p = document.createElement('p')
-    p.innerText = 'おめでとうございます'
-    resultMessage.appendChild(p)
+    validation(){
+        const numOfWinners = document.querySelector('#numOfWinners').value
+        const nameBox = document.querySelectorAll('.nameBox').length
+        
+        if(numOfWinners <= nameBox){
+            return true
+        }
+    }
+    winnerMessage(){
+        const resultMessage = document.querySelector('#resultMessage')
+        const p = document.createElement('p')
+        p.innerText = 'おめでとうございます'
+        resultMessage.appendChild(p)
+    }
 }
 
 const onClick = document.getElementById('onClick')
@@ -129,7 +141,6 @@ onClick.addEventListener('click',()=>{
     const lottery = new Lottery()
 
     lottery.execute()
-    winnerMessage()
 })
 // add form
 addForm()
