@@ -1,3 +1,4 @@
+//当選者数plus minus ボタン
 document.querySelector('#formPlus').addEventListener('click',()=>{
     document.querySelector('#numOfWinners').value++;
 })
@@ -12,11 +13,13 @@ class Lottery{
         if(this.validation()){
             this.output(this.select())
             this.winnerMessage()
+            //背景色はbackgroundColor
+            const stateResult = document.querySelector('.stateResult').style.color='red'
         } else {
             alert('当選者数が多すぎます')
         }
     }
- 
+
     select(){
         const nameBox = document.querySelectorAll('.nameBox')
         const winnerCount = document.querySelector('#numOfWinners').value
