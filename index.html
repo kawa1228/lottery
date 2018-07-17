@@ -8,8 +8,8 @@
   <h1>抽選</h1>
 
   <ul class = 'stateTop'>
-    <li><a href="#">設定</a></li>
-    <li><a href="#">結果</a></li>    
+    <li onclick="window.location.reload();">設定</li>
+    <li>結果</li>    
   </ul>
 
   <div id='winner'>
@@ -30,12 +30,12 @@
 
   <div id='result'>
     <button id='onClick'>結果を表示する</button>
-    <p class='resultMessage'>おめでとうメッセージ</p>
+    <p id='resultMessage'></p>
   </div>
 
   <div id='winnerList'></div>
 
-  <input type="reset" id='reset' value="もう一度">
+  <input type="button" value="もう一度" onclick="window.location.reload();">
 
   <script src="./dist/app.js"></script>
 </body>

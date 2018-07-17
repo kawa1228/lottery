@@ -48,11 +48,19 @@ class Lottery{
     }
 }
 
+const winnerMessage = ()=>{
+    const resultMessage = document.querySelector('#resultMessage')
+    const p = document.createElement('p')
+    p.innerText = 'おめでとうございます'
+    resultMessage.appendChild(p)
+}
+
 const onClick = document.getElementById('onClick')
 onClick.addEventListener('click',()=>{ 
     const lottery = new Lottery()
 
     lottery.execute()
+    winnerMessage()
 })
 // add form
 addForm()
@@ -71,13 +79,13 @@ function addForm(){
             /*スタイルを変更し可視化する*/
             newNode.style.display = '';
 
+        let p = document.createElement('p');
         for(let j=1; j<textArray.length; j++) {
             /*id属性値を変更*/
             newNode.id = 'NameId0' + j;
-            /*コンテンツを挿入*/
-            newNode.appendChild(document.createTextNode(newNode.id));
             /*新ノードを追加*/
-            addWinnerList.appendChild(newNode);
+            p.appendChild(newNode);
+            addWinnerList.appendChild(p);
         }
     }
 }
