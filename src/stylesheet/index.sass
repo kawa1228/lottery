@@ -1,0 +1,115 @@
+$baseColor: #E06B61
+$subCoror-o: #F0B2AC
+$subColor-b: #45A1CF
+$subColor-g: #009F8C
+$fontColor: #393939
+
+//button style リセット
+button
+    background-color: transparent
+    border: none
+    cursor: pointer
+    outline: none
+    padding: 0
+    appearance: none
+body
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+    font-size: 62.5%
+    color: $fontColor
+    header
+        height: 130px
+        h1
+            font-size: 3em
+            margin: 0.5em
+        h2
+            margin: 1em auto
+            text-align: center
+            font-size: 3em
+            margin: 0.5em
+    .top
+        .stateTop
+            display: table
+            width: 30% 
+            padding: 0
+            margin: 0
+            overflow: hidden
+        
+        & li
+            display: table-cell
+            position: relative
+            background: #504944
+            padding: 1em 0.5em 1em 20em
+            color: #fff
+        
+        & li:last-child
+            padding-right: 1em
+        // くの字 
+        & li:before,
+        & li:after
+            content: ""
+            position: absolute
+            width: 0
+            height: 0
+            margin: auto
+        
+        // しろいせん 
+        & li:before
+            top: -15px
+            right: -1em
+            border-style: solid
+            border-color: transparent #fff
+            border-width: 40px 0 40px 1em
+            z-index: 10
+        
+        // 三角部分 
+        & li:after
+            top: -15px
+            right: -.8em
+            border-style: solid
+            border-color: #504944
+            border-width: 40px 0 40px 1em
+            z-index: 10
+        
+        // 右側背景 
+        & li.stateConfig
+            background: #009F8C
+        
+        // 三角の中身 
+        & li.stateConfig:after
+            border-color: transparent #009F8C
+            
+    .mainContainer
+        font-size: 1.5em
+        p
+            margin: 1em auto
+            text-align: center
+        .winnerForm
+            display: flex
+            justify-content: center
+        #applicant
+        #resultButton
+            margin: 1em auto
+            text-align: center
+    .middleContainer
+        font-size: 1.5em
+        margin: 1em auto
+        text-align: center
+        #winnerList
+            ul
+                li
+                   list-style: none 
+    .bottomContainer
+        font-size: 1.5em
+        margin: 1em auto
+        text-align: center
+    footer
+
+
+    
+
+
+
+
+
+       
+            

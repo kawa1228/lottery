@@ -81,7 +81,7 @@ class Lottery{
     execute(){
         if(this.validation()){
             this.output(this.select())
-            this.winnerMessage()
+            document.querySelector('#resultMessage').style.display='block'
             //背景色はbackgroundColor
             const stateResult = document.querySelector('.stateResult').style.color='red'
         } else {
@@ -130,12 +130,6 @@ class Lottery{
         if(numOfWinners <= nameBox){
             return true
         }
-    }
-    winnerMessage(){
-        const resultMessage = document.querySelector('#resultMessage')
-        const p = document.createElement('p')
-        p.innerText = 'おめでとうございます'
-        resultMessage.appendChild(p)
     }
 }
 
