@@ -21,45 +21,47 @@ body {
       text-align: center;
       font-size: 3em;
       margin: 0.5em; }
-  body .top .stateTop {
-    display: table;
-    width: 30%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden; }
-  body .top li {
-    display: table-cell;
-    position: relative;
-    background: #504944;
-    padding: 1em 0.5em 1em 20em;
-    color: #fff; }
-  body .top li:last-child {
-    padding-right: 1em; }
-  body .top li:before,
-  body .top li:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin: auto; }
-  body .top li:before {
-    top: -15px;
-    right: -1em;
-    border-style: solid;
-    border-color: transparent #fff;
-    border-width: 40px 0 40px 1em;
-    z-index: 10; }
-  body .top li:after {
-    top: -15px;
-    right: -.8em;
-    border-style: solid;
-    border-color: #504944;
-    border-width: 40px 0 40px 1em;
-    z-index: 10; }
-  body .top li.stateConfig {
-    background: #009F8C; }
-  body .top li.stateConfig:after {
-    border-color: transparent #009F8C; }
+  body .top {
+    display: flex;
+    justify-content: center; }
+    body .top .stateTop {
+      display: table;
+      padding: 0;
+      margin: 0;
+      overflow: hidden; }
+    body .top li {
+      display: table-cell;
+      position: relative;
+      background: #504944;
+      padding: 1em 0.5em 1em 10em;
+      color: #fff; }
+    body .top li:last-child {
+      padding-right: 1em; }
+    body .top li:before,
+    body .top li:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin: auto; }
+    body .top li:before {
+      top: -15px;
+      right: -1em;
+      border-style: solid;
+      border-color: transparent #fff;
+      border-width: 33px 0 40px 1em;
+      z-index: 10; }
+    body .top li:after {
+      top: -15px;
+      right: -.8em;
+      border-style: solid;
+      border-color: #504944;
+      border-width: 33px 0 40px 1em;
+      z-index: 10; }
+    body .top li.stateConfig {
+      background: #009F8C; }
+    body .top li.stateConfig:after {
+      border-color: transparent #009F8C; }
   body .mainContainer {
     font-size: 1.5em; }
     body .mainContainer p {
