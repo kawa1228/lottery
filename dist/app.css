@@ -20,19 +20,26 @@ body {
   font-size: 62.5%;
   color: #393939; }
 
+.wrapper {
+  width: 680px;
+  margin-right: auto;
+  margin-left: auto; }
+
 header {
   height: 130px; }
 
 h1 {
   font-size: 3em;
   font-style: italic;
-  margin: 0.5em; }
+  margin: 0.5em;
+  letter-spacing: -0.05em; }
 
 h2 {
   margin: 1em auto;
   text-align: center;
   font-size: 3em;
-  margin: 0.5em; }
+  margin: 0.5em;
+  letter-spacing: 0.5em; }
 
 .top {
   display: flex;

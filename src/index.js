@@ -10,11 +10,19 @@ document.querySelector('#formMinus').addEventListener('click',()=>{
 
 class Lottery{
     execute(){
-        if(this.validation()){
+        if(this.formValidation()){
+            alert('応募者名を入力してください')
+        } else if(this.validation()){
             this.output(this.select())
-            document.querySelector('#resultMessage').style.display='block'
-            this.changeColor()
 
+            const stateConfig = document.querySelector('.stateConfig')
+            const stateResult = document.querySelector('.stateResult')
+
+            if (stateConfig && stateResult) {
+                this.changeColor(stateConfig, stateResult)
+            }
+
+            document.querySelector('#resultMessage').style.display='block'
         } else {
             alert('当選者数が多すぎます')
         }
@@ -62,14 +70,17 @@ class Lottery{
             return true
         }
     }
-    changeColor(){
-        const stateConfig = document.querySelector('.stateConfig')
-        const stateResult = document.querySelector('.stateResult')
-
+    changeColor(stateConfig, stateResult){
         stateConfig.classList.add('stateConfigAfter')
         stateConfig.classList.remove('stateConfig')
         stateResult.classList.add('stateResultAfter')
         stateResult.classList.remove('stateResult')
+    }
+    formValidation(){
+        const nameBox = document.querySelector('.nameBox').value
+        if(nameBox === ''){
+            return true
+        }
     }
 }
 
@@ -107,9 +118,14 @@ function addForm(){
     }
 }
 // delete form
-const deleteApplicant = document.getElementById('deleteApplicant')
+const deleteApplicant = document.querySelector('#deleteApplicant')
 deleteApplicant.addEventListener('click',()=>{
-    deleteForms()
+    const nameBox = document.querySelectorAll('.nameBox')
+    if(nameBox.length > 1){
+        deleteForms()
+    } else {
+        alert('消しすぎです')
+    }
 })
 
 const deleteForms = ()=>{
