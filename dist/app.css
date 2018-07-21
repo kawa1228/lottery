@@ -59,9 +59,9 @@ body {
       border-width: 33px 0 40px 1em;
       z-index: 10; }
     body .top li.stateConfig {
-      background: #009F8C; }
+      background: #E06B61; }
     body .top li.stateConfig:after {
-      border-color: transparent #009F8C; }
+      border-color: transparent #E06B61; }
   body .mainContainer {
     font-size: 1.5em; }
     body .mainContainer p {

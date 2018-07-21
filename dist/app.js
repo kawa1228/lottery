@@ -82,8 +82,14 @@ class Lottery{
         if(this.validation()){
             this.output(this.select())
             document.querySelector('#resultMessage').style.display='block'
-            //背景色はbackgroundColor
-            const stateResult = document.querySelector('.stateResult').style.color='red'
+            //色の変更
+             const stateConfig = document.querySelector('.stateConfig')
+             stateConfig.style.background='#504944'
+             const stateResult = document.querySelector('.stateResult')
+             stateResult.style.background='#E06B61'
+
+             //stateConfig.classList.add('stateConfigAfter')
+
         } else {
             alert('当選者数が多すぎます')
         }
