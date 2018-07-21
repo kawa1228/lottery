@@ -13,14 +13,7 @@ class Lottery{
         if(this.validation()){
             this.output(this.select())
             document.querySelector('#resultMessage').style.display='block'
-            //色の変更
-             const stateConfig = document.querySelector('.stateConfig')
-             const stateResult = document.querySelector('.stateResult')
-
-             stateConfig.classList.add('stateConfigAfter')
-             stateConfig.classList.remove('stateConfig')
-             stateResult.classList.add('stateResultAfter')
-             stateResult.classList.remove('stateResult')
+            this.changeColor()
 
         } else {
             alert('当選者数が多すぎます')
@@ -68,6 +61,15 @@ class Lottery{
         if(numOfWinners <= nameBox){
             return true
         }
+    }
+    changeColor(){
+        const stateConfig = document.querySelector('.stateConfig')
+        const stateResult = document.querySelector('.stateResult')
+
+        stateConfig.classList.add('stateConfigAfter')
+        stateConfig.classList.remove('stateConfig')
+        stateResult.classList.add('stateResultAfter')
+        stateResult.classList.remove('stateResult')
     }
 }
 
