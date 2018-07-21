@@ -15,11 +15,12 @@ class Lottery{
             document.querySelector('#resultMessage').style.display='block'
             //色の変更
              const stateConfig = document.querySelector('.stateConfig')
-             stateConfig.style.background='#504944'
              const stateResult = document.querySelector('.stateResult')
-             stateResult.style.background='#E06B61'
 
-             //stateConfig.classList.add('stateConfigAfter')
+             stateConfig.classList.add('stateConfigAfter')
+             stateConfig.classList.remove('stateConfig')
+             stateResult.classList.add('stateResultAfter')
+             stateResult.classList.remove('stateResult')
 
         } else {
             alert('当選者数が多すぎます')

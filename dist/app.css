@@ -11,75 +11,125 @@ body {
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF',YuGothic,'Yu Gothic','\30E1\30A4\30EA\30AA', Meiryo,'\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF','MS PGothic';
   font-size: 62.5%;
   color: #393939; }
-  body header {
-    height: 130px; }
-    body header h1 {
-      font-size: 3em;
-      margin: 0.5em; }
-    body header h2 {
-      margin: 1em auto;
-      text-align: center;
-      font-size: 3em;
-      margin: 0.5em; }
-  body .top {
+
+header {
+  height: 130px; }
+
+h1 {
+  font-size: 3em;
+  margin: 0.5em; }
+
+h2 {
+  margin: 1em auto;
+  text-align: center;
+  font-size: 3em;
+  margin: 0.5em; }
+
+.top {
+  display: flex;
+  justify-content: center; }
+
+.stateTop {
+  display: table;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+li.stateResult,
+li.stateConfig {
+  display: table-cell;
+  position: relative;
+  background: #504944;
+  padding: 1em 0.5em 1em 10em;
+  color: #fff; }
+
+li.stateResultAfter,
+li.stateConfigAfter {
+  display: table-cell;
+  position: relative;
+  background: #E06B61;
+  padding: 1em 0.5em 1em 10em;
+  color: #fff; }
+
+li.stateResult:last-child {
+  padding-right: 1em; }
+
+li.stateResultAfter:last-child {
+  padding-right: 1em; }
+
+li:before,
+li:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: auto; }
+
+li.stateConfig:before {
+  top: -15px;
+  right: -1em;
+  border-style: solid;
+  border-color: transparent #fff;
+  border-width: 33px 0 40px 1em;
+  z-index: 10; }
+
+li.stateConfigAfter:before {
+  top: -15px;
+  right: -1em;
+  border-style: solid;
+  border-color: transparent #fff;
+  border-width: 33px 0 40px 1em;
+  z-index: 10; }
+
+li.stateResult:after,
+li.stateConfig:after {
+  top: -15px;
+  right: -.8em;
+  border-style: solid;
+  border-color: #504944;
+  border-width: 33px 0 40px 1em;
+  z-index: 10; }
+
+li.stateConfigAfter:after {
+  top: -15px;
+  right: -.8em;
+  border-style: solid;
+  border-color: #504944;
+  border-width: 33px 0 40px 1em;
+  z-index: 10; }
+
+li.stateConfig {
+  background: #E06B61; }
+
+li.stateConfigAfter {
+  background: #504944; }
+
+li.stateConfig:after {
+  border-color: transparent #E06B61; }
+
+li.stateConfigAfter:after {
+  border-color: transparent #504944; }
+
+.mainContainer {
+  font-size: 1.5em; }
+  .mainContainer p {
+    margin: 1em auto;
+    text-align: center; }
+  .mainContainer .winnerForm {
     display: flex;
     justify-content: center; }
-    body .top .stateTop {
-      display: table;
-      padding: 0;
-      margin: 0;
-      overflow: hidden; }
-    body .top li {
-      display: table-cell;
-      position: relative;
-      background: #504944;
-      padding: 1em 0.5em 1em 10em;
-      color: #fff; }
-    body .top li:last-child {
-      padding-right: 1em; }
-    body .top li:before,
-    body .top li:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin: auto; }
-    body .top li:before {
-      top: -15px;
-      right: -1em;
-      border-style: solid;
-      border-color: transparent #fff;
-      border-width: 33px 0 40px 1em;
-      z-index: 10; }
-    body .top li:after {
-      top: -15px;
-      right: -.8em;
-      border-style: solid;
-      border-color: #504944;
-      border-width: 33px 0 40px 1em;
-      z-index: 10; }
-    body .top li.stateConfig {
-      background: #E06B61; }
-    body .top li.stateConfig:after {
-      border-color: transparent #E06B61; }
-  body .mainContainer {
-    font-size: 1.5em; }
-    body .mainContainer p {
-      margin: 1em auto;
-      text-align: center; }
-    body .mainContainer .winnerForm {
-      display: flex;
-      justify-content: center; }
-    body .mainContainer #resultButton {
-      margin: 1em auto;
-      text-align: center; }
-  body .middleContainer {
-    font-size: 1.5em;
+  .mainContainer #resultButton {
     margin: 1em auto;
     text-align: center; }
-    body .middleContainer #winnerList ul li {
-      list-style: none; }
-  body .bottomContainer {
-    font-size: 1.5em;
-    margin: 1em auto;
-    text-align: center; }
+
+.middleContainer {
+  font-size: 1.5em;
+  margin: 1em auto;
+  text-align: center; }
+  .middleContainer #winnerList ul li {
+    list-style: none; }
+
+.bottomContainer {
+  font-size: 1.5em;
+  margin: 1em auto;
+  text-align: center; }
