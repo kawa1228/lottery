@@ -5,6 +5,8 @@
     <title>test</title>
     <link rel="stylesheet" href="./dist/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.1.0/dist/siimple.min.css">
   </head>
 <body>
   <header>
@@ -23,23 +25,27 @@
     <p>当選者数を入力してください</p>
     <div class ='winnerForm'>
       <div id='winner'></div>
-      <p><input type=text id='numOfWinners' value=1>
-      <button id ='formPlus'><i class="fas fa-plus"></i></button>
-      <button id ='formMinus'><i class="fas fa-minus"></i></button></p>
+      <p>
+        <input type=text id='numOfWinners' value=1>
+        <button id ='formPlus' class='sButton'><i class="fas fa-plus"></i></button>
+        <button id ='formMinus' class='sButton'><i class="fas fa-minus"></i></button>
+      </p>
     </div>
 
     <p>応募者名を入力してください</p>
     <div id='applicant'>
       <div id='addWinnerList'>
-        <p><input type="text" id='NameId0' class="nameBox" >
-        <button id ='addApplicant'><i class="fas fa-plus"></i></button>
-        <button id ='deleteApplicant'><i class="fas fa-minus"></i></button></p>
+        <div class="input-name-form-wrapper">
+          <p><input type="text" id='NameId0' class="nameBox" placeholder="name">
+          <button id ='addApplicant' class='sButton'><i class="fas fa-plus"></i></button>
+          <button id ='deleteApplicant' class='sButton'><i class="fas fa-minus"></i></button></p>
+        </div>
       </div>
     </div>
 
     <div id='resultButton'>
-      <button id='onClick'><i class="fas fa-angle-right"></i>　結果を表示する</button>
-      <p id='resultMessage' style="display: none;">おめでとうございます</p>
+      <button type="submit" class='mButton' id='onClick'><i class="fas fa-angle-right"></i>　結果表示</button>
+      <p id='resultMessage' style="display: none;">おめでとうございます(^^)!</p>
     </div>
   </div>
 
@@ -48,7 +54,7 @@
   </div>
 
   <div class ='bottomContainer'>
-    <button onclick="window.location.reload();"><i class="fas fa-angle-right"></i>　もう一度</button>
+    <button class='mButton' onclick="window.location.reload();"><i class="fas fa-angle-right"></i>　もう一度</button>
   </div>
   <script src="./dist/app.js"></script>
   <footer></footer>
