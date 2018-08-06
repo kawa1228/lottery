@@ -39,7 +39,6 @@ class validation{
     }
 }
 
-
 //抽選
 class Lottery{
     execute(){
